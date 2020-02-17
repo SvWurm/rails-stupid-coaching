@@ -1,0 +1,20 @@
+<h1>Coach Answer</h1>
+
+
+<p class="pipe-grey">
+  <%= @answer %><br>
+  <em>-You</em>
+</p>
+
+<p class="pipe-grey backgr-yellow">
+  <%= if @answer == "I am going to work"
+    "Great!"
+  elsif @answer.include? "?"
+    "Silly question, get dressed and go to work!"
+  else
+    "I don't care, get dressed and go to work!"
+    end %>
+    <br><em> - sincerly, your coach</em>
+  </p>
+
+  <p><%= link_to 'Lets go back!', '/ask' %></p>
